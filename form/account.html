@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>Account</title>
+</head>
+
+<body>
+  <header>
+    <h1>Settings</h1>
+    <p>Manage your account settings and set e-mail preferences.</p>
+  </header>
+
+  <hr />
+  <div class="site-content">
+    <aside>
+      <nav>
+        <ul>
+          <div>
+            <li><a href="./profile.html" class="nav-links">Profile</a></li>
+          </div>
+          <div>
+            <li><a href="./account.html" class="nav-links">Account</a></li>
+          </div>
+          <div>
+            <li>
+              <a href="./appearance.html" class="nav-links">Appearance</a>
+            </li>
+          </div>
+          <div>
+            <li>
+              <a href="./notifications.html" class="nav-links">Notifications</a>
+            </li>
+          </div>
+          <div>
+            <li><a href="./display.html" class="nav-links">Display</a></li>
+          </div>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <div>
+        <h2>Account</h2>
+        <p>
+          Update your account settings. Set your preferred language and
+          timezone.
+        </p>
+      </div>
+
+      <hr />
+
+      <div>
+        <form action="" method="post" id="displayForm">
+          <label for="name">
+            <h3>Name</h3>
+          </label>
+          <input type="text" name="name" id="name" class="hundredpercent" maxlength="55" required />
+
+          <hr class="separator-no-border" />
+
+          <label for="dob">
+            <h3>Date of Birth</h3>
+          </label>
+          <input type="date" name="dob" id="dob" class="dob-selector" value="" required />
+
+          <hr class="separator-no-border" />
+
+          <label for="languages">
+            <h3>Language</h3>
+          </label>
+
+          <input type="text" name="language" id="languages" class="fourtypercent" list="languages-option"
+            required></input>
+          <datalist id="languages-option">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Italian">Italian</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Russian">Russian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Hindi">Hindi</option>
+          </datalist>
+          <hr class="separator-no-border" />
+
+
+          <div id="update-button">
+            <button type="reset" onclick="updateAccount()">
+              Update account
+            </button>
+          </div>
+        </form>
+      </div>
+      <label for="copy-button">
+        <div class="copy-button-container">
+          <button id="copy-button" onclick="copyCode()">Copy</button>
+        </div>
+      </label>
+
+      <hr id="copy-code-separator" />
+      <pre>
+              <code>
+{
+  <span class="bright-color">name:</span> <span class="dim-color" id="name-json">""</span>,
+  <span class="bright-color">language:</span> <span class="dim-color" id="language-json">"en"</span>,
+  <span class="bright-color">dob:</span> <span class="dim-color" id="dob-json">undefined</span>
+}
+              </code>
+      </pre>
+    </main>
+  </div>
+  <script src="./script/script.js"></script>
+  <script src="./script/account.js"></script>
+</body>
+
+</html>

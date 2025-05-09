@@ -1,0 +1,432 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Geist, sans-serif;
+  padding: 30px 25px;
+  background-color: rgb(255, 255, 255);
+}
+
+header {
+  padding: 15px;
+}
+
+@font-face {
+  font-family: Menlo-Regular;
+  src: url("../fonts/Menlo-Regular.woff");
+}
+
+.site-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.site-content .checkbox,
+.site-content label,
+.site-content input[type="checkbox"] {
+  cursor: pointer;
+}
+
+h1 {
+  color: rgb(9, 9, 11);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2 {
+  font-weight: 500;
+  padding: 1px 0px 5px 0px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: rgb(9, 9, 11);
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(113, 113, 122);
+  line-height: 24px;
+  padding: 2px 0px 5px 0px;
+}
+
+.profile-content p {
+  font-family: system-ui, sans-serif;
+  font-weight: 400px;
+  font-size: 14px;
+  color: rgb(113, 113, 122);
+}
+
+.profile-content h2 + p {
+  font-size: 16px;
+}
+
+.profile-content h1 h2 h3 {
+  font-family: Geist, sans-serif;
+}
+
+#bio {
+  height: 70px;
+}
+
+body > hr,
+main > hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid rgb(221, 221, 221);
+}
+
+.separator-no-border {
+  margin: 20px 0;
+  padding: 0px;
+  height: 0px;
+  width: 0px;
+}
+
+.themes-container input[type="radio"] {
+  display: none;
+}
+
+.themes-container img:hover {
+  cursor: pointer;
+}
+
+.themes-container input[type="radio"]:checked + label img {
+  border: 2px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.themes-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.themes-label-container {
+  display: flex;
+  flex-direction: row;
+  gap: 235px;
+  margin-left: 115px;
+}
+
+aside {
+  width: 250px;
+}
+
+aside nav ul li {
+  list-style: none;
+}
+
+.active-link a {
+  font-weight: 600;
+}
+
+.active-link {
+  box-sizing: border-box;
+  background-color: #f4f4f5;
+  border-radius: 15px;
+  margin: 4px;
+}
+
+aside nav ul li a {
+  color: rgb(24, 24, 27);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 45px;
+  text-decoration: none;
+  padding-left: 13px;
+}
+
+nav ul div:hover {
+  cursor: pointer;
+}
+
+nav ul div:hover li a {
+  text-decoration: underline;
+}
+
+main {
+  width: 700px;
+  padding-left: 40px;
+}
+
+form div {
+  padding: 4px 4px;
+}
+
+form div label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(9, 9, 11);
+  padding-left: 5px;
+}
+
+input[type="checkbox"]:checked {
+  filter: grayscale(100%);
+}
+
+form div button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: black;
+  color: rgb(250, 250, 250);
+  border-radius: 5px;
+  padding: 7px 15px;
+}
+
+form div button:hover {
+  cursor: pointer;
+}
+
+#update-button {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.copy-button-container {
+  background-color: rgb(9, 9, 11);
+}
+
+#copy-code-separator {
+  border: 1px solid rgb(221, 221, 221);
+  margin: 0px;
+  padding: 0px;
+}
+
+#copy-button {
+  font-family: Menlo-Regular, monospace;
+  color: white;
+  background-color: rgb(9, 9, 11);
+}
+
+#copy-button:hover {
+  cursor: pointer;
+}
+
+pre {
+  color: white;
+  background-color: rgb(9, 9, 11);
+}
+
+code,
+code .updated-json {
+  font-family: Menlo-Regular, monospace;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.533);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+code span {
+  color: rgb(255, 255, 255);
+}
+
+.custom-select {
+  color: rgb(9, 9, 11);
+  font-size: 16px;
+  padding-top: 5px;
+  padding-left: 4px;
+  padding-right: 100px;
+  padding-bottom: 5px;
+  border: #dbdbe1 1px solid;
+  border-radius: 5px;
+}
+
+custom-select:hover {
+  cursor: pointer;
+  background-color: rgba(221, 214, 214, 0.533);
+}
+
+#theme-choice-json,
+#font-choice-json,
+.dim-color {
+  color: rgba(255, 255, 255, 0.533);
+}
+
+.notification-choice {
+  font-size: 14px;
+  font-weight: 500px;
+}
+
+input[type="radio"]:checked {
+  filter: grayscale(100%) invert(0%);
+}
+
+.email-notifications-parent-div {
+  display: flex;
+  border: 1px solid rgb(221, 221, 221);
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin: 0px;
+  padding: 0px;
+  width: 15px;
+  height: 15px;
+}
+
+.email-notifications-children-div {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.email-notifications-children-div .checkbox {
+  padding-right: 15px;
+}
+
+.email-notifications-grandchildren-div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.email-notifications-parent-div h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(9, 9, 11);
+  line-height: 28px;
+}
+
+.email-notifications-parent-div p,
+.mobile-settings p {
+  font-weight: 400;
+  color: rgb(113, 113, 122);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.mobile-settings {
+  display: flex;
+  margin-top: 20px;
+}
+
+.mobile-settings input[type="checkbox"] {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  width: 15px;
+  height: 15px;
+}
+
+.mobile-settings label {
+  padding-left: 5px;
+  font-weight: 500;
+  color: rgb(9, 9, 11);
+  font-size: 14px;
+  line-height: 14px;
+}
+
+/* Toggle switch style for .checkbox input[type="checkbox"] in notifications.html */
+
+.checkbox {
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  width: 44px;
+  height: 24px;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.checkbox .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #e5e5e5;
+  transition: background 0.3s;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.checkbox input[type="checkbox"]:hover + .slider {
+  background: #cccccc;
+}
+
+.checkbox input[type="checkbox"]:checked + .slider {
+  background: rgb(9, 9, 11); /* Black when checked */
+}
+
+.checkbox .slider::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.3s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.checkbox input[type="checkbox"]:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.hundredpercent,
+.dob-selector,
+.fourtypercent,
+.username-textarea,
+.url-container input {
+  font-family: Geist, monospace;
+  font-size: 14px;
+  font-weight: 400px;
+  color: rgb(9, 9, 11);
+  padding-left: 10px;
+  width: 100%;
+  height: 32px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+}
+
+.dob-selector {
+  width: 50%;
+}
+
+.fourtypercent {
+  width: 40%;
+}
+
+.url-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+#add-url {
+  margin-top: 10px;
+  filter: invert(100%);
+}
+
+#add-url:hover {
+  cursor: pointer;
+  color:#cccccc;
+}
